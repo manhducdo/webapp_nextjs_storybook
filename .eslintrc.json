@@ -1,3 +1,12 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "plugin:storybook/recommended"],
+  "plugins": ["prettier", "@typescript-eslint", "simple-import-sort"],
+  "rules": {
+    "prettier/prettier": "error",
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn",
+    "import/first": "warn",
+    "import/newline-after-import": "warn",
+    "import/no-duplicates": "warn"
+  }
 }
