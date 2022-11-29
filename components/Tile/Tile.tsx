@@ -9,14 +9,11 @@ import { boxShadow, borderRadius } from "@/components/styles";
 import { AppTheme } from "@/styles/themes";
 
 type Props = {
-  header: (string | ReactElement<any, string | JSXElementConstructor<any>>) &
-    ReactNode;
-  children?: (string | ReactElement<any, string | JSXElementConstructor<any>>) &
-    ReactNode;
-  theme?: AppTheme | undefined;
+  header: string;
+  children?: string | ReactElement<any, string | JSXElementConstructor<any>>;
 };
 
-const Section = styled.section<Props>`
+const Section = styled.section`
   ${borderRadius}
   padding: 1vmin 4vmin 4vmin;
   background-color: ${({ theme }) => theme?.background};
@@ -25,9 +22,9 @@ const Section = styled.section<Props>`
     boxShadow(theme?.components.shadow1, theme?.components.shadow2)}
 `;
 
-export const Tile: FC<Props> = ({ header, children, ...rest }) => {
+export const Tile: FC<Props> = ({ header, children }) => {
   return (
-    <Section {...rest}>
+    <Section>
       <h2>{header}</h2>
       {children}
     </Section>
