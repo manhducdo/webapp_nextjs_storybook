@@ -39,6 +39,7 @@
     "@storybook/testing-library": "^0.0.13",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.4",
+    "@testing-library/react-hooks": "^8.0.1",
     "babel-loader": "^8.3.0",
     "chromatic": "^6.11.4",
     "eslint-plugin-storybook": "^0.6.7",
