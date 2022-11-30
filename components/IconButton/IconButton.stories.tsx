@@ -1,5 +1,4 @@
-import { ComponentStoryObj, ComponentMeta } from "@storybook/react";
-import { expect } from "@storybook/jest";
+import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 import { screen, userEvent } from "@storybook/testing-library";
 
 import { IconButton } from "@/components/IconButton";

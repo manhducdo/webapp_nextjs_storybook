@@ -2,7 +2,7 @@ import { ComponentStoryObj, ComponentMeta } from "@storybook/react";
 
 import { Tile } from "@/components/Tile/Tile";
 import { expect } from "@storybook/jest";
-import { screen, userEvent } from "@storybook/testing-library";
+import { screen } from "@storybook/testing-library";
 
 export default {
   title: "Content/Tile",

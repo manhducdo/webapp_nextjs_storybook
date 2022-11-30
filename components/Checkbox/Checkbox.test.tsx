@@ -1,4 +1,4 @@
-import { userEvent } from "@storybook/testing-library";
+import userEvent from "@testing-library/user-event";
 
 import { render, screen } from "@/test-utils";
 
