@@ -4,7 +4,7 @@ import { expect } from "@storybook/jest";
 
 describe("Icon test cases", () => {
   it("Icon render check", () => {
-    const { asFragment } = render(<Icon name="Moon" size={"2rem"} />);
+    const { asFragment } = render(<Icon name="Moon" />);
 
     expect(asFragment()).toMatchSnapshot();
   });

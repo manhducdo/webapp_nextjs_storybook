@@ -1,1 +1,1 @@
-export { Icon } from "@/components/Icon/Icon";
+export { Icon, type Props  } from "@/components/Icon/Icon";

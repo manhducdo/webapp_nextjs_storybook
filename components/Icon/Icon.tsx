@@ -1,35 +1,25 @@
-import { Icons } from "@/components/Icon/Icons";
-import styled from "@emotion/styled";
 import { FC } from "react";
-import { useTheme } from "@emotion/react";
-import { AppTheme } from "@/styles/themes";
+import styled from "@emotion/styled";
+
+import { Icons } from "@/components/Icon/Icons";
 
 export type AvailableIcons = keyof typeof Icons;
 
-type WrapperProps = {
-  size: string;
-  theme: AppTheme;
-};
-
 export type Props = {
+  /** Icon name */
   name: AvailableIcons;
-  size: string;
+  /** Width and height */
+  size?: number;
 } & React.SVGProps<SVGSVGElement>;
 
-const Wrapper = styled.div<WrapperProps>`
-  color: ${({ theme }) => theme.font.regular};
-  width: ${({ size }) => size};
-  height: ${({ size }) => size};
-`;
+// https://reactsvgicons.com/search
 
-export const Icon: FC<Props> = ({ name, size = "2rem" }) => {
-  const Icon = Icons[name];
-  const sizes = { width: size, height: size };
-  const theme = useTheme();
+export const Icon: FC<Props> = ({ name, size = 2, ...rest }) => {
+  const Icon = styled(Icons[name])`
+    color: ${({ theme }) => theme.font.regular};
+  `;
+  const sizeInRem = `${size}rem`;
+  const sizes = { width: sizeInRem, height: sizeInRem };
 
-  return (
-    <Wrapper theme={theme} size={size}>
-      <Icon {...sizes} />
-    </Wrapper>
-  );
+  return <Icon role="img" aria-label={name} {...sizes} {...rest} />;
 };
