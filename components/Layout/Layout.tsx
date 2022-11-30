@@ -103,7 +103,9 @@ type Props = {
 export const Layout: FC<Props> = ({ children, isDark, onThemeToggle }) => (
   <Wrapper>
     <Link href="/" passHref>
-      <StyledLogo size={3}>CTO</StyledLogo>
+      <LogoLink>
+        <StyledLogo size={3}>CTO</StyledLogo>
+      </LogoLink>
     </Link>
     <MainNav>
       <Link href="/all">All</Link>
