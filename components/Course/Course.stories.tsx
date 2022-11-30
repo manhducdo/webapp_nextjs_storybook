@@ -10,7 +10,11 @@ export default {
 } as ComponentMeta<typeof Course>;
 
 export const BasicCourse: ComponentStoryObj<typeof Course> = {
-  play: async () => {},
+  play: async () => {
+    await expect(screen.getByRole("heading")).toBeInTheDocument();
+    await expect(screen.getByRole("img")).toBeInTheDocument();
+    await expect(screen.getByRole("link")).toBeInTheDocument();
+  },
   args: {
     header: "Header Course",
     imageProps: {

@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import Link from "next/link";
 import Image, { ImageProps } from "next/image";
 import { borderRadius, boxShadow } from "@/components/styles";
+import { StyledLink } from "@/components/StyledLink";
 
 const Section = styled.section`
   display: flex;
@@ -27,9 +28,7 @@ const Section = styled.section`
   }
 `;
 
-const CourseLink = styled.a`
-  all: unset;
-  cursor: pointer;
+const CourseLink = styled(StyledLink)`
   padding: 1vmin 4vmin;
 
   > *:last-child {
