@@ -80,12 +80,17 @@ const StyledInput = styled.input`
 
 const StyledIcon = styled(Icon)`
   position: absolute;
-  right: 1rem;
+  right: 0.3rem;
   color: ${({ theme }) => theme.font.placeholder};
   opacity: 0.7;
 `;
 
-const Label = styled.span`
+type LabelProps = {
+  width?: number;
+  height?: number;
+};
+
+const Label = styled.span<LabelProps>`
   grid-area: label;
   padding-left: 1.4rem;
 `;
